@@ -1,4 +1,4 @@
-import { EmployeeType } from "./employeesTabelColumns";
+import { EmployeeType } from "./employeesTableColumns";
 
 export const employeesData: EmployeeType[] = [
   {

@@ -10,10 +10,10 @@ function dashboardPage() {
         <>
             <Tabs defaultValue='employees' >
                 <TabsList className='mb-4'>
-                    <TabsTrigger value='employees'>
+                    <TabsTrigger value='employees' className='cursor-pointer'>
                         Employees stat
-                    </TabsTrigger>
-                    <TabsTrigger value='teams'>
+                    </TabsTrigger >
+                    <TabsTrigger value='teams' className='cursor-pointer'>
                         Teams stat
                     </TabsTrigger>
                 </TabsList>
