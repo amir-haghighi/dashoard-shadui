@@ -15,8 +15,8 @@ function LightDarkToggle({ className }: Props) {
                     resolvedTheme === "light" ? "dark" : "light"
                 )}>
                     <Button variant={"outline"}>
-                        <SunIcon className='block dark:hidden' />
-                        <MoonIcon className='hidden dark:block' />
+                        <SunIcon className='hidden dark:block' />
+                        <MoonIcon className='block dark:hidden' />
                     </Button>
                 </TooltipTrigger>
                 <TooltipContent>

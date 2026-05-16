@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 
 import "./globals.css";
-import Providers from "./Providers";
+import Providers from "@/app/Providers";
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -29,17 +30,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Providers>
-      <html
-        lang="en"
-        suppressHydrationWarning
-        className={`${poppins.className} h-full antialiased`}
-      >
 
-        <body className="min-h-full flex flex-col">{children}
-        </body>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${poppins.className} h-full antialiased`}
+    >
 
-      </html>
-    </Providers>
+      <body className="min-h-full flex flex-col">
+        <Providers>
+          {children}
+        </Providers>
+      </body>
+
+    </html>
+
   );
 }

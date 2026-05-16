@@ -96,7 +96,7 @@ function LoginPage() {
                                     </Field>
                                 )}
                             />
-                            <Button type="submit" >Sign up</Button>
+                            <Button type="submit" >Log in</Button>
                         </FieldGroup>
 
                     </form>

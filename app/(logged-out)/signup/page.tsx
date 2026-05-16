@@ -24,6 +24,10 @@ function SignupPage() {
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: "",
+            password: "",
+            passwordConfirm: "",
+            companyName: "",
+            numberOfEmployees: undefined
 
         }
     })
@@ -129,6 +133,7 @@ function SignupPage() {
                                                 </FieldLabel>
                                                 <Input
                                                     {...field}
+                                                    value={field.value ?? ""}
                                                     type='number'
                                                     id="numberOfEmployees"
                                                     aria-invalid={fieldState.invalid}
