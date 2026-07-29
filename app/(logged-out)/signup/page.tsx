@@ -20,7 +20,7 @@ import { useRouter } from 'next/navigation'
 
 function SignupPage() {
     const router = useRouter()
-    const form = useForm<z.infer<typeof formSchema>>({
+    const form = useForm<z.input<typeof formSchema>, unknown, z.output<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: "",
@@ -28,14 +28,12 @@ function SignupPage() {
             passwordConfirm: "",
             companyName: "",
             numberOfEmployees: undefined
-
         }
     })
-    const onSubmit = (data: z.infer<typeof formSchema>) => {
+    const onSubmit = (data: z.output<typeof formSchema>) => {
         console.log("validation passed , data:", data);
         router.push("/dashboard")
     }
-
     const accountType = form.watch("accountType")
 
     return (
@@ -133,7 +131,7 @@ function SignupPage() {
                                                 </FieldLabel>
                                                 <Input
                                                     {...field}
-                                                    value={field.value ?? ""}
+                                                    value={(field.value as number | string | undefined) ?? ""}
                                                     type='number'
                                                     id="numberOfEmployees"
                                                     aria-invalid={fieldState.invalid}

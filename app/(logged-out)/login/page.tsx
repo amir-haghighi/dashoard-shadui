@@ -14,6 +14,8 @@ import { useRouter } from 'next/navigation'
 const formSchema = z.object({
     email: z.email(),
     password: z.string()
+        .min(8, "Password must be at least 8 characters")
+        .regex(/[A-Z]/, "Password must contain at least one uppercase letter"),
 })
 function LoginPage() {
     const router = useRouter()
@@ -41,7 +43,11 @@ function LoginPage() {
                         Login
                     </CardTitle>
                     <CardDescription>
-                        Login to your SupportMe account
+                        <strong className='text-xl text-red-300'> (DEMO ,No validation)</strong>
+                        <br />
+                        <span>  Login to your SupportMe account</span>
+
+
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -59,7 +65,6 @@ function LoginPage() {
                                             {...field}
                                             id="email"
                                             aria-invalid={fieldState.invalid}
-                                            autoComplete="off"
                                         />
                                         {fieldState.invalid && (
                                             <FieldError errors={[{ message: "invalid Email" }]} />
@@ -91,7 +96,7 @@ function LoginPage() {
                                                 password : at least 8 characters , one Uppercase
                                             </FieldDescription>}
                                         {fieldState.invalid && (
-                                            <FieldError errors={[{ message: "password : at least 8 characters , one Uppercase" }]} />
+                                            <FieldError errors={[fieldState.error]} />
                                         )}
                                     </Field>
                                 )}
