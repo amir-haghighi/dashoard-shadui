@@ -26,7 +26,7 @@ function MainMenu({ className }: { className?: ClassNameValue }) {
                         AH
                     </AvatarFallback>
                 </Avatar>
-                <Link href="/" className='underline'>Log out</Link>
+                <Link href="/logged-out" className='underline'>Log out</Link>
                 <LightDarkToggle className='ml-auto' />
             </div>
         </nav>

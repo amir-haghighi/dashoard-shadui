@@ -131,7 +131,7 @@ function SignupPage() {
                                                 </FieldLabel>
                                                 <Input
                                                     {...field}
-                                                    value={(field.value as number | string | undefined) ?? ""}
+                                                    value={(field.value as number | string | undefined) ?? ""}  
                                                     type='number'
                                                     id="numberOfEmployees"
                                                     aria-invalid={fieldState.invalid}
