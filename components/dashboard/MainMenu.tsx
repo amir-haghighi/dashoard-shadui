@@ -14,11 +14,11 @@ function MainMenu({ className }: { className?: ClassNameValue }) {
                 <MenuTitle />
             </header>
             <ul className='py-4 grow'>
-                <MenuItems href='/dashboard' >My Dashboard</MenuItems>
-                <MenuItems href='/dashboard/teams' >Teams</MenuItems>
-                <MenuItems href='/dashboard/employees' >Employees</MenuItems>
-                <MenuItems href='/dashboard/account' >Account</MenuItems>
-                <MenuItems href='/dashboard/settings' >Settings</MenuItems>
+                <MenuItems href='/' >My Dashboard</MenuItems>
+                <MenuItems href='/teams' >Teams</MenuItems>
+                <MenuItems href='/employees' >Employees</MenuItems>
+                <MenuItems href='/account' >Account</MenuItems>
+                <MenuItems href='/settings' >Settings</MenuItems>
             </ul>
             <div className='flex gap-2 items-center '>
                 <Avatar>

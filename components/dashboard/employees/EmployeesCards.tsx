@@ -26,7 +26,7 @@ function EmployeesCards() {
                     </div>
                     <div>
                         <Button size={"sm"} asChild>
-                            <Link href={"/dashboard/employees"}>
+                            <Link href={"/employees"}>
                                 View all
                             </Link>
                         </Button>
@@ -49,7 +49,7 @@ function EmployeesCards() {
 
                     <div>
                         <Button size={"sm"} asChild>
-                            <Link href={"/dashboard/employees"}>
+                            <Link href={"/employees"}>
                                 View all
                             </Link>
                         </Button>

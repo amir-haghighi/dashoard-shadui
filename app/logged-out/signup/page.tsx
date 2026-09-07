@@ -32,7 +32,7 @@ function SignupPage() {
     })
     const onSubmit = (data: z.output<typeof formSchema>) => {
         console.log("validation passed , data:", data);
-        router.push("/dashboard")
+        router.push("/")
     }
     const accountType = form.watch("accountType")
 
@@ -131,7 +131,7 @@ function SignupPage() {
                                                 </FieldLabel>
                                                 <Input
                                                     {...field}
-                                                    value={(field.value as number | string | undefined) ?? ""}  
+                                                    value={(field.value as number | string | undefined) ?? ""}
                                                     type='number'
                                                     id="numberOfEmployees"
                                                     aria-invalid={fieldState.invalid}
@@ -269,7 +269,7 @@ function SignupPage() {
                 <CardFooter className='justify-between'>
                     <small>Already have an account ? </small>
                     <Button asChild variant={"outline"} size="sm">
-                        <Link href="/login">Log in</Link>
+                        <Link href="/logged-out/login">Log in</Link>
                     </Button>
                 </CardFooter>
             </Card >

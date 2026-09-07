@@ -28,7 +28,7 @@ function LoginPage() {
     })
     const onSubmit = (data: z.infer<typeof formSchema>) => {
         console.log("validation passed , data:", data)
-        router.push("/dashboard")
+        router.push("/")
 
     }
     return (
@@ -110,7 +110,7 @@ function LoginPage() {
                 <CardFooter className='justify-between'>
                     <small>Don't have an account ? </small>
                     <Button asChild variant={"outline"} size="sm">
-                        <Link href="/signup">Sing up</Link>
+                        <Link href="/logged-out/signup">Sing up</Link>
                     </Button>
                 </CardFooter>
             </Card >

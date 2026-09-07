@@ -7,7 +7,7 @@ import { MenuIcon } from "lucide-react"
 type Props = {
     children?: React.ReactNode
 }
-export default function dashboardLayout({ children }: Props) {
+export default function DashboardLayout({ children }: Props) {
     const isDesktop = useMediaQuery("(min-width:768px)")
     return (
         <div className='md:grid md:grid-cols-[250px_1fr] h-screen'>

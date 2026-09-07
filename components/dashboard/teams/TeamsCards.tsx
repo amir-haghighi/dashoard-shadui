@@ -28,7 +28,7 @@ function TeamsCards() {
                     </div>
                     <div>
                         <Button size={"sm"} asChild>
-                            <Link href={"/dashboard/teams"}>
+                            <Link href={"/teams"}>
                                 View all
                             </Link>
                         </Button>
@@ -46,7 +46,7 @@ function TeamsCards() {
                 </CardHeader>
                 <CardContent className='flex  gap-4 flex-wrap w-[95%] '>
                     {teamLeaders.map(leader =>
-                        <TooltipProvider>
+                        <TooltipProvider key={`${leader.lastName}-${leader.lastName}`}>
                             < Tooltip key={`${leader.firstName}${leader.lastName}`}>
                                 <TooltipTrigger asChild>
                                     <Avatar size='lg'>
